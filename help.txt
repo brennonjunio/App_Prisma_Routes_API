@@ -1,0 +1,20 @@
+
+
+------ instalação -----------------
+npm init -y
+npm install typescript ts-node @types/node --save-dev
+
+npx tsc --init
+
+npm install prisma --save-dev
+
+npx prisma init --datasource-provider sqlite
+
+
+-------- BD ----------
+DATABASE_URL="file:./dev.db" <<<<< passado no .env
+
+
+------ migração das tabelas
+
+npx prisma migrate dev --name init
